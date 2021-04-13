@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  6 17:26:37 2021
+
+@author: matis
+"""
+
+class Equipe:
+    def __init__(self,name,nbre_joueurs,budgetPrivee):
+        self.name=name
+        self.nbre_joueurs=nbre_joueurs
+        self.__budgetPrivee=budgetPrivee
+        
+    def getName(self):
+        print("C'est l'équipe "+self.name)
+
+class Football(Equipe):
+    def __init__(self,palmares_championsleague,capitaine):
+        self.palmares_championsleague=palmares_championsleague
+        self.capitaine=capitaine
+        
+    def __budget(self,budgetPrivee):
+        print("Le budget est de"+self.budgetPrivee )
+    
+    def info(self,classement,championnat):
+        print("L'équipe"+ str(self.getName())+"est"+classement +"au"+championnat)
+        
+        
+    
+class Basketball(Equipe):
+    def __init__(self,palmares_NBA,mvp):
+        self.palmares_NBA=palmares_NBA
+        self.mvp=mvp
+    
+    def __budget(self,budgetPrivee):
+        print("Le budget est de "+self.budgetPrivee )
+        
+        
+    def info(self,classement,championnat):
+        print("L'équipe"+ str(self.getName())+"est"+classement +"au"+championnat)
