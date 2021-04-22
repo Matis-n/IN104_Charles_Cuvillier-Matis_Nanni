@@ -18,8 +18,11 @@ class Equipe:
         return self.name
        
     
-class Football:
-    def __init__(self,palmaresLDC, capitaine):
+class Football(Equipe):
+    def __init__(self,name, budget, nb_de_joueurs,palmaresLDC, capitaine):
+        self.name = name
+        self.budget = budget
+        self.nb_de_joueurs = nb_de_joueurs
         self.palmaresLDC = palmaresLDC
         self.capitaine= capitaine
         
@@ -28,11 +31,33 @@ class Football:
     
     def but(self):
         print ("BUUUUUT")
+    
+    def ajout_budget(self,montant):
+        self.budget += montant
+        print("l'equipe a maintenant un budget de "+str(self.budget) )
         
-class Basketball:
-    def __init__(self,palmaresNBA, MVP):
+    def transfert(self, nom_du_joueur, prix):
+        self.budget -= prix
+        self.nb_de_joueurs +=1
+        print("recrutement de"+ nom_du_joueur +"pour" +str(prix))
+        
+    def victoire_en_LDC(self,année):
+        self.palmaresLDC.append(année)
+        
+        
+class Basketball(Equipe):
+    def __init__(self,name, budget, nb_de_joueurs,palmaresNBA, MVP):
+        self.name = name
+        self.budget = budget
+        self.nb_de_joueurs = nb_de_joueurs
         self.palmaresNBA = palmaresNBA
         self.MVP= MVP
+        
+    def MVP(self):
+        return "le MVP de l'équipe est"+self.MVP
+    
+    def panier(self):
+        print("switch")
         
     def MVP(self):
         return "le MVP de l'équipe est"+self.MVP
