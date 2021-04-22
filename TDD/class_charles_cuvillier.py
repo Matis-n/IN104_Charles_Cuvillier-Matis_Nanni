@@ -18,8 +18,9 @@ class Equipe:
         return self.name
        
     
-class Football:
-    def __init__(self,palmaresLDC, capitaine):
+class Football(Equipe):
+    def __init__(self,name,budget,nb_de_joueurs,palmaresLDC,capitaine):
+        Equipe.__init__()
         self.palmaresLDC = palmaresLDC
         self.capitaine= capitaine
         
