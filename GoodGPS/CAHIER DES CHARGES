@@ -1,0 +1,6 @@
+Faire une appli pour aller à des monuments pas loin de sa position :
+-	Géolocaliser la personne
+-	Rechercher les monuments autour de sa position
+-	Les afficher
+-	Faire une interface pour que l’utilisateur choisisse où aller
+-	Afficher le trajet
