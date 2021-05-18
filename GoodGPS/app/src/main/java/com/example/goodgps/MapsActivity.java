@@ -32,6 +32,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import android.widget.Button;
 import android.widget.Toast;
 
 /**
@@ -63,12 +65,15 @@ OnMapLongClickListener{
     private boolean permissionDenied = false;
 
     private GoogleMap map;
+    private Button itinaryButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
+        itinaryButton=(Button) findViewById(R.id.button2);
+        itinaryButton.setEnabled(false);
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -100,9 +105,20 @@ OnMapLongClickListener{
         }
     }
 
+    public void clickItinaryButton(){
+
+
+    }
+
     @Override
     public void onMapLongClick(LatLng latLng) {
-        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Lat")); }
+
+        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)));
+        itinaryButton.setEnabled(true);
+
+    }
+
+
 
     @Override
     public boolean onMyLocationButtonClick() {

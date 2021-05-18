@@ -1519,6 +1519,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button2
 id buttonPanel
 id cancel_button
 id center
@@ -1543,6 +1544,7 @@ id custom
 id customPanel
 id cut
 id dark
+id darkSwitch
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
