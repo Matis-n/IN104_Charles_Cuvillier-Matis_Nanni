@@ -15,8 +15,9 @@
 package com.example.goodgps;
 
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -44,7 +45,9 @@ public class MapsActivity extends AppCompatActivity
         OnMyLocationButtonClickListener,
         OnMyLocationClickListener,
         OnMapReadyCallback,
-        ActivityCompat.OnRequestPermissionsResultCallback{
+        ActivityCompat.OnRequestPermissionsResultCallback,
+OnMapLongClickListener{
+
 
     /**
      * Request code for location permission request.
@@ -77,9 +80,8 @@ public class MapsActivity extends AppCompatActivity
         map.setOnMyLocationButtonClickListener(this);
         map.setOnMyLocationClickListener(this);
         enableMyLocation();
+        map.setOnMapLongClickListener(this);
 
-        LatLng paris = new LatLng(48, 2);
-        map.addMarker(new MarkerOptions().position(paris).title("Tour Eiffel Wesh"));
     }
 
     /**
@@ -97,6 +99,10 @@ public class MapsActivity extends AppCompatActivity
                     Manifest.permission.ACCESS_FINE_LOCATION, true);
         }
     }
+
+    @Override
+    public void onMapLongClick(LatLng latLng) {
+        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Lat")); }
 
     @Override
     public boolean onMyLocationButtonClick() {
