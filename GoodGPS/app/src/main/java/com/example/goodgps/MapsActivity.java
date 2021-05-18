@@ -22,9 +22,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 
@@ -33,8 +36,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * This demo shows how GMS Location can be used to check for changes to the users location.  The
@@ -66,6 +74,7 @@ OnMapLongClickListener{
 
     private GoogleMap map;
     private Button itinaryButton;
+    private List markersList = new ArrayList();
 
 
     @Override
@@ -86,8 +95,21 @@ OnMapLongClickListener{
         map.setOnMyLocationClickListener(this);
         enableMyLocation();
         map.setOnMapLongClickListener(this);
+        itinaryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // The user just clicked
+                if (markersList.size()==4) {
+                   Polyline red = map.addPolyline(new PolylineOptions()
+                            .color(Color.BLUE)
+                            .width(6)
+                            .add(new LatLng((double)markersList.get(0), (double)markersList.get(1)), new LatLng((double)markersList.get(2), (double)markersList.get(3))));
+                }
+        }
+        } );
 
     }
+
 
     /**
      * Enables the My Location layer if the fine location permission has been granted.
@@ -105,15 +127,15 @@ OnMapLongClickListener{
         }
     }
 
-    public void clickItinaryButton(){
 
 
-    }
 
     @Override
     public void onMapLongClick(LatLng latLng) {
 
-        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)));
+        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true));
+        markersList.add(latLng.latitude);
+        markersList.add(latLng.longitude);
         itinaryButton.setEnabled(true);
 
     }

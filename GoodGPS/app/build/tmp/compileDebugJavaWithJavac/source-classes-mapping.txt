@@ -7,3 +7,4 @@ com/example/goodgps/PermissionUtils.java
  com.example.goodgps.PermissionUtils$RationaleDialog$1
 com/example/goodgps/MapsActivity.java
  com.example.goodgps.MapsActivity
+ com.example.goodgps.MapsActivity$1
