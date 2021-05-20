@@ -4,16 +4,16 @@
         "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-anydpi-v26\\my_logo_round.xml"
     },
     {
-        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_my_logo_foreground.png.flat",
-        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-xhdpi\\my_logo_foreground.png"
+        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_my_logo_foreground.png.flat",
+        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-xhdpi\\my_logo_foreground.png"
     },
     {
         "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_heliport.png.flat",
         "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\drawable\\heliport.png"
+    },
+    {
+        "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\matis\\Documents\\ENSTA\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_my_logo_background.png.flat",

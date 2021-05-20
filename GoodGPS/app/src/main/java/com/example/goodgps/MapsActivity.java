@@ -22,6 +22,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -76,6 +77,7 @@ OnMapLongClickListener{
     private GoogleMap map;
     private Button itinaryButton;
     private List markersList = new ArrayList();
+    private Marker marker;
 
 
     @Override
@@ -135,7 +137,10 @@ OnMapLongClickListener{
     @Override
     public void onMapLongClick(LatLng latLng) {
 
-        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport)));
+        if (marker != null){
+            marker.remove();
+        }
+        marker = map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport)));
         markersList.add(latLng.latitude);
         markersList.add(latLng.longitude);
         itinaryButton.setEnabled(true);
