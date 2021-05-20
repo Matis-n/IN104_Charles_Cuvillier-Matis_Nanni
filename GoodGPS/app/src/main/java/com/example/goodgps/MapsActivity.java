@@ -133,6 +133,25 @@ OnMapLongClickListener{
     @Override
     public void onMapLongClick(LatLng latLng) {
 
+        /**
+        // essai pour customiser les marqueurs
+        LatLng latlng = new LatLng(latLng.latitude, latLng.longitude));
+        MarkerOptions markerOptions = new MarkerOptions();
+        MarkerOptions.position(latlng);
+        MarkerOptions.title("marqueur").draggable(true);
+        MarkerOptions.icon(R.drawable.heliport);
+        markersList.add(latLng.latitude);
+        markersList.add(latLng.longitude);
+        map.addMarker(MarkerOptions);
+        
+        /**
+         ça c'est un code qui marche mais qui met pas l'icone
+        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport)));
+        markersList.add(latLng.latitude);
+        markersList.add(latLng.longitude);
+        */
+            
+        //ça c'est le code de base qui marche
         map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true));
         markersList.add(latLng.latitude);
         markersList.add(latLng.longitude);
