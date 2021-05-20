@@ -88,9 +88,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ma
 	android:label
 		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:17:9-50
 	android:icon
-		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:15:9-39
 	android:allowBackup
 		ADDED from C:\Users\matis\Documents\ENSTA\IN104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme

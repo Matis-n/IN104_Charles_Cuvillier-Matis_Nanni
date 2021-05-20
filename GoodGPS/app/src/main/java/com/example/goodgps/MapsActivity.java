@@ -20,6 +20,7 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
@@ -81,7 +82,7 @@ OnMapLongClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        itinaryButton=(Button) findViewById(R.id.button2);
+        itinaryButton=(Button) findViewById(R.id.button2); //bouton démarrer l'itinéraire
         itinaryButton.setEnabled(false);
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -128,31 +129,13 @@ OnMapLongClickListener{
     }
 
 
-
+/** Quand on clique longtemps sur la map, on affiche un marqueur de descritpion lat,long
+  */
 
     @Override
     public void onMapLongClick(LatLng latLng) {
 
-        /**
-        // essai pour customiser les marqueurs
-        LatLng latlng = new LatLng(latLng.latitude, latLng.longitude));
-        MarkerOptions markerOptions = new MarkerOptions();
-        MarkerOptions.position(latlng);
-        MarkerOptions.title("marqueur").draggable(true);
-        MarkerOptions.icon(R.drawable.heliport);
-        markersList.add(latLng.latitude);
-        markersList.add(latLng.longitude);
-        map.addMarker(MarkerOptions);
-        
-        /**
-         ça c'est un code qui marche mais qui met pas l'icone
         map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport)));
-        markersList.add(latLng.latitude);
-        markersList.add(latLng.longitude);
-        */
-            
-        //ça c'est le code de base qui marche
-        map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true));
         markersList.add(latLng.latitude);
         markersList.add(latLng.longitude);
         itinaryButton.setEnabled(true);
