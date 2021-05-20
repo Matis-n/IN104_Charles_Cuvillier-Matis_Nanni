@@ -39,6 +39,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -89,6 +90,16 @@ OnMapLongClickListener{
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        /**
+        //essai pour créer une animation sur le bouton
+        itinaryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                android.view.animation.Animation animation = AnimationUtils.loadAnimation(MapsActivity.this,R.anim.bounce);
+                itinaryButton.startAnimation(animation);
+            }
+        });
+         */
     }
 
     @Override
