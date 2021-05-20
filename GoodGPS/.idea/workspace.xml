@@ -27,7 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b313968-0df8-4616-bf7b-f0d06a1c262f" name="Default Changelist" comment="icône marqueur">
+    <list default="true" id="5b313968-0df8-4616-bf7b-f0d06a1c262f" name="Default Changelist" comment="un marqueur à la fois">
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/goodgps/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/goodgps/MapsActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621527891244</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="un marqueur à la fois">
+      <created>1621528148963</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621528148963</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +299,8 @@
     <MESSAGE value="Dark mode + coordonnées" />
     <MESSAGE value="itinéraire en hélico" />
     <MESSAGE value="icône marqueur" />
-    <option name="LAST_COMMIT_MESSAGE" value="icône marqueur" />
+    <MESSAGE value="un marqueur à la fois" />
+    <option name="LAST_COMMIT_MESSAGE" value="un marqueur à la fois" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2506" y="198" key="#Inspections" timestamp="1621359852743">
@@ -345,11 +353,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1621527078000" />
-    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621528007790">
+    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621528372704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621363992272" />
-    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1621528007790" />
+    <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1621528372704" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1621350681898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

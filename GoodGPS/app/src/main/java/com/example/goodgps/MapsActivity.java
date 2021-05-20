@@ -102,12 +102,11 @@ OnMapLongClickListener{
             @Override
             public void onClick(View v) {
                 // The user just clicked
-                if (markersList.size()==4) {
                    Polyline red = map.addPolyline(new PolylineOptions()
                             .color(Color.BLUE)
                             .width(6)
                             .add(new LatLng((double)markersList.get(0), (double)markersList.get(1)), new LatLng((double)markersList.get(2), (double)markersList.get(3))));
-                }
+
         }
         } );
 
