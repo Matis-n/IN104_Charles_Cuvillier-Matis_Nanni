@@ -40,12 +40,12 @@
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_heliport2.png.flat",
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\drawable\\heliport2.png"
+    },
+    {
+        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoomin.xml.flat",

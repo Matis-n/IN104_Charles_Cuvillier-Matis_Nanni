@@ -107,15 +107,7 @@ OnMapLongClickListener{
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //essai pour créer une animation sur le bouton
-        itinaryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                android.view.animation.Animation animation = AnimationUtils
-                        .loadAnimation(MapsActivity.this,R.anim.bounce);
-                itinaryButton.startAnimation(animation);
-            }
-        });
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         locationRequest = LocationRequest.create();
@@ -137,6 +129,9 @@ OnMapLongClickListener{
             public void onClick(View v) {
                 // The user just clicked the buton 'demarrer l'ittineraire'
                 Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
+                android.view.animation.Animation animation = AnimationUtils
+                        .loadAnimation(MapsActivity.this,R.anim.bounce);
+                itinaryButton.startAnimation(animation);
                 locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
                     @Override
                     public void onSuccess(Location location) {

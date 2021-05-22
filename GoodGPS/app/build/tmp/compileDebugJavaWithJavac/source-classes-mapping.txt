@@ -8,6 +8,5 @@ com/example/goodgps/PermissionUtils.java
 com/example/goodgps/MapsActivity.java
  com.example.goodgps.MapsActivity
  com.example.goodgps.MapsActivity$1
+ com.example.goodgps.MapsActivity$1$1
  com.example.goodgps.MapsActivity$2
- com.example.goodgps.MapsActivity$2$1
- com.example.goodgps.MapsActivity$3
