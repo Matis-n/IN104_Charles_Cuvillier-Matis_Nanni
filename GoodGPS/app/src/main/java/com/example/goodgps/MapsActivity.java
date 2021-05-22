@@ -14,6 +14,12 @@
 
 package com.example.goodgps;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
@@ -27,6 +33,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -38,6 +47,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -61,7 +72,6 @@ public class MapsActivity extends AppCompatActivity
         ActivityCompat.OnRequestPermissionsResultCallback,
 OnMapLongClickListener{
 
-
     /**
      * Request code for location permission request.
      *
@@ -79,6 +89,12 @@ OnMapLongClickListener{
     private Button itinaryButton;
     private List markersList = new ArrayList();
     private Marker marker;
+    FusedLocationProviderClient fusedLocationProviderClient;
+    LocationRequest locationRequest;
+
+    Marker userLocationMarker;
+
+    private static final String TAG = "MapsActivity";
 
 
     @Override
@@ -90,16 +106,23 @@ OnMapLongClickListener{
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        /**
+
         //essai pour créer une animation sur le bouton
         itinaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                android.view.animation.Animation animation = AnimationUtils.loadAnimation(MapsActivity.this,R.anim.bounce);
+                android.view.animation.Animation animation = AnimationUtils
+                        .loadAnimation(MapsActivity.this,R.anim.bounce);
                 itinaryButton.startAnimation(animation);
             }
         });
-         */
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
+        locationRequest = LocationRequest.create();
+        locationRequest.setInterval(500);
+        locationRequest.setFastestInterval(500);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        
     }
 
     @Override
@@ -112,17 +135,73 @@ OnMapLongClickListener{
         itinaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // The user just clicked
-                   Polyline red = map.addPolyline(new PolylineOptions()
-                            .color(Color.BLUE)
-                            .width(6)
-                            .add(new LatLng((double)markersList.get(0), (double)markersList.get(1)), new LatLng((double)markersList.get(2), (double)markersList.get(3))));
-
-        }
+                // The user just clicked the buton 'demarrer l'ittineraire'
+                Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
+                locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        LatLng userlatlng = new LatLng(location.getLatitude(),location.getLongitude());
+                        Polyline red = map.addPolyline(new PolylineOptions()
+                                .color(Color.BLUE)
+                                .width(6)
+                                .add(new LatLng((double)markersList.get(0), (double)markersList.get(1)), userlatlng));
+                        //map.moveCamera(CameraUpdateFactory.newLatLngZoom(userlatlng,13));
+                    }
+                });
+            }
         } );
 
+
+    };
+
+    LocationCallback locationCallback = new LocationCallback(){
+        @Override
+        public void onLocationResult(LocationResult locationResult){
+            super.onLocationResult(locationResult);
+            Log.d(TAG,"onLocationResult: " + locationResult.getLastLocation());
+            if (map != null){
+                setUserLocationMarker(locationResult.getLastLocation());
+            }
+        }
+    };
+
+    private void setUserLocationMarker(Location location){
+        LatLng latLng = new LatLng(location.getLatitude(),location.getLongitude());
+        if (userLocationMarker == null){
+            //create a new marker
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.position(latLng)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
+                    .anchor((float) 0.5,(float) 0.5);
+            userLocationMarker = map.addMarker(markerOptions);
+            map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,13));
+        } else {
+            //use the old marker
+            userLocationMarker.setPosition((latLng));
+
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,13));
+        }
     }
 
+    protected void startLocationUpdates(){
+        fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
+    }
+
+    protected void stopLocationUpdates(){
+        fusedLocationProviderClient.removeLocationUpdates(locationCallback);
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        startLocationUpdates();
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        stopLocationUpdates();
+    }
 
     /**
      * Enables the My Location layer if the fine location permission has been granted.
@@ -150,7 +229,12 @@ OnMapLongClickListener{
         if (marker != null){
             marker.remove();
         }
-        marker = map.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude)).draggable(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport)));
+        marker = map.addMarker(new MarkerOptions()
+                .position(new LatLng(latLng.latitude, latLng.longitude))
+                .title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude))
+                .draggable(true)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
+
         markersList.add(latLng.latitude);
         markersList.add(latLng.longitude);
         itinaryButton.setEnabled(true);
