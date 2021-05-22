@@ -141,11 +141,17 @@ OnMapLongClickListener{
                     @Override
                     public void onSuccess(Location location) {
                         LatLng userlatlng = new LatLng(location.getLatitude(),location.getLongitude());
+                        map.clear();
+                        marker = map.addMarker(new MarkerOptions()
+                                .position(new LatLng((double)markersList.get(0), (double)markersList.get(1)))
+                                .title("destination")
+                                .draggable(false)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
                         Polyline red = map.addPolyline(new PolylineOptions()
                                 .color(Color.BLUE)
                                 .width(6)
                                 .add(new LatLng((double)markersList.get(0), (double)markersList.get(1)), userlatlng));
-                        //map.moveCamera(CameraUpdateFactory.newLatLngZoom(userlatlng,13));
+
                     }
                 });
             }
@@ -228,11 +234,13 @@ OnMapLongClickListener{
 
         if (marker != null){
             marker.remove();
+            markersList.remove(1);
+            markersList.remove(0);
         }
         marker = map.addMarker(new MarkerOptions()
                 .position(new LatLng(latLng.latitude, latLng.longitude))
                 .title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude))
-                .draggable(true)
+                .draggable(false)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
 
         markersList.add(latLng.latitude);
