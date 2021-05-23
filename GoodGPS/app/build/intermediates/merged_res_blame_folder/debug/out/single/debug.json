@@ -8,12 +8,12 @@
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\my_logo_background.xml"
     },
     {
-        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_my_logo_foreground.png.flat",
-        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-hdpi\\my_logo_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_my_logo_foreground.png.flat",
+        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\mipmap-hdpi\\my_logo_foreground.png"
     },
     {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_my_logo_foreground.png.flat",
@@ -228,12 +228,12 @@
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_my_logo_background.png.flat",
-        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\my_logo_background.png"
-    },
-    {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_helico.png.flat",
         "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\src\\main\\res\\drawable\\helico.png"
+    },
+    {
+        "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_my_logo_background.png.flat",
+        "source": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\my_logo_background.png"
     },
     {
         "merged": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",

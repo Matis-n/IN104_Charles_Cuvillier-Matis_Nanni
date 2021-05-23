@@ -40,6 +40,7 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -114,7 +115,7 @@ OnMapLongClickListener{
         locationRequest.setInterval(500);
         locationRequest.setFastestInterval(500);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        
+
     }
 
     @Override
@@ -127,7 +128,7 @@ OnMapLongClickListener{
         itinaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // The user just clicked the buton 'demarrer l'ittineraire'
+                // The user just clicked the button 'demarrer l'ittineraire'
                 Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
                 android.view.animation.Animation animation = AnimationUtils
                         .loadAnimation(MapsActivity.this,R.anim.bounce);
@@ -137,6 +138,13 @@ OnMapLongClickListener{
                     public void onSuccess(Location location) {
                         LatLng userlatlng = new LatLng(location.getLatitude(),location.getLongitude());
                         map.clear();
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(userlatlng)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
+                                .anchor((float) 0.5,(float) 0.5);
+                        userLocationMarker = map.addMarker(markerOptions);
+                        map.animateCamera(CameraUpdateFactory.newLatLngZoom(userlatlng,13));
+
                         marker = map.addMarker(new MarkerOptions()
                                 .position(new LatLng((double)markersList.get(0), (double)markersList.get(1)))
                                 .title("destination")
@@ -180,7 +188,7 @@ OnMapLongClickListener{
             //use the old marker
             userLocationMarker.setPosition((latLng));
 
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,13));
+            //map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,13));
         }
     }
 
