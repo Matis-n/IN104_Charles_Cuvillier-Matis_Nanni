@@ -1622,6 +1622,7 @@ int id masked 0x7f08009c
 int id message 0x7f08009d
 int id middle 0x7f08009e
 int id mini 0x7f08009f
+int id modeText 0x7f080131
 int id month_grid 0x7f0800a0
 int id month_navigation_bar 0x7f0800a1
 int id month_navigation_fragment_toggle 0x7f0800a2

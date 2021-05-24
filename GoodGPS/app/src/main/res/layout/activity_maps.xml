@@ -22,14 +22,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:elevation="@dimen/cardview_default_elevation">
 
         <Switch
             android:id="@+id/darkSwitch"
-            android:layout_width="152dp"
+            android:layout_width="64dp"
             android:layout_height="38dp"
-            android:text="Hélico/Voiture" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/purple_700" />
+
+        <TextView
+            android:id="@+id/modeText"
+            android:layout_width="221dp"
+            android:layout_height="38dp"
+            android:text="Mode : Voiture ma gueule"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/purple_700" />
     </LinearLayout>
 
     <LinearLayout

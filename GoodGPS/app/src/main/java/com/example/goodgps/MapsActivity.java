@@ -14,9 +14,7 @@
 
 package com.example.goodgps;
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.graphics.Color;
-import android.location.Address;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,19 +52,14 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
-import android.media.MediaPlayer;
-import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -74,16 +67,13 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -119,7 +109,9 @@ OnMapLongClickListener{
     private Switch helicoSwitch;
     private List markersList = new ArrayList();
     private Marker marker;
+    private TextView modeText;
     private boolean switchState=false;
+
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationRequest locationRequest;
 
@@ -138,6 +130,7 @@ OnMapLongClickListener{
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        modeText=(TextView) findViewById(R.id.modeText);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -156,15 +149,17 @@ OnMapLongClickListener{
         enableMyLocation();
         map.setOnMapLongClickListener(this);
 
+
         /**True = allumé = trajet en hélico*/
         helicoSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // do something, the isChecked will be true if the switch is in the On position
                 switchState=isChecked;
                 Log.d("Switch",Boolean.toString(switchState));
+                if (switchState==true){modeText.setText("Mode : Hélicoptère");}
+                else{modeText.setText("Mode : Voiture ma gueule");}
             }
         });
-
         itinaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
