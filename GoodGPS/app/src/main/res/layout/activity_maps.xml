@@ -40,6 +40,13 @@
             android:text="Mode : Voiture ma gueule"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/purple_700" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/stat_notify_sync" />
     </LinearLayout>
 
     <LinearLayout

@@ -14,6 +14,7 @@
 
 package com.example.goodgps;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -111,7 +112,8 @@ OnMapLongClickListener{
     private Marker marker;
     private TextView modeText;
     private boolean switchState=false;
-
+    int duration=Toast.LENGTH_SHORT;
+    Context context;
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationRequest locationRequest;
 
@@ -138,6 +140,7 @@ OnMapLongClickListener{
         locationRequest.setInterval(500);
         locationRequest.setFastestInterval(500);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        context=getApplicationContext();
 
     }
 
@@ -152,12 +155,15 @@ OnMapLongClickListener{
 
         /**True = allumé = trajet en hélico*/
         helicoSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @SuppressLint("MissingPermission")
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // do something, the isChecked will be true if the switch is in the On position
                 switchState=isChecked;
                 Log.d("Switch",Boolean.toString(switchState));
                 if (switchState==true){modeText.setText("Mode : Hélicoptère");}
-                else{modeText.setText("Mode : Voiture ma gueule");}
+                else{modeText.setText("Mode : Voiture ma gueule");
+                    }
             }
         });
         itinaryButton.setOnClickListener(new View.OnClickListener() {
@@ -269,10 +275,10 @@ else{
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
-            ParserTask parserTask = new ParserTask();
+                ParserTask parserTask = new ParserTask();
 
 
-            parserTask.execute(result);
+                parserTask.execute(result);
 
         }
     }
@@ -332,7 +338,13 @@ else{
             }
 
 // Drawing polyline in the Google Map for the i-th route
-            map.addPolyline(lineOptions);
+            if (lineOptions == null) {
+
+                Toast toast = Toast.makeText(context, "Il n'existe pas de tel chemin", duration);
+                toast.show();
+            } else {
+                map.addPolyline(lineOptions);
+            }
         }
     }
 
