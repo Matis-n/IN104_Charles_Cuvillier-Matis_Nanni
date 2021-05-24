@@ -1,12 +1,12 @@
-com/example/goodgps/DirectionsJSONParser.java
- com.example.goodgps.DirectionsJSONParser
-com/example/goodgps/BuildConfig.java
- com.example.goodgps.BuildConfig
 com/example/goodgps/PermissionUtils.java
  com.example.goodgps.PermissionUtils
  com.example.goodgps.PermissionUtils$PermissionDeniedDialog
  com.example.goodgps.PermissionUtils$RationaleDialog
  com.example.goodgps.PermissionUtils$RationaleDialog$1
+com/example/goodgps/DirectionsJSONParser.java
+ com.example.goodgps.DirectionsJSONParser
+com/example/goodgps/BuildConfig.java
+ com.example.goodgps.BuildConfig
 com/example/goodgps/SplashScreenActivity.java
  com.example.goodgps.SplashScreenActivity
  com.example.goodgps.SplashScreenActivity$1

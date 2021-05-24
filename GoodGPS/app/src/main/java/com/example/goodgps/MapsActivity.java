@@ -217,7 +217,7 @@ else{
                         map.clear();
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(userlatlng)
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.simple_travel_car_top_view))
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.voiture))
                                 .anchor((float) 0.5, (float) 0.5);
                         userLocationMarker = map.addMarker(markerOptions);
                         map.animateCamera(CameraUpdateFactory.newLatLngZoom(userlatlng, 13));
@@ -429,14 +429,14 @@ else{
         if (userLocationMarker == null){
             //create a new marker
             MarkerOptions markerOptions = new MarkerOptions();
-            if (switchState==true){
+            if (switchState==false){
                 markerOptions.position(latLng)
                         .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
                         .anchor((float) 0.5,(float) 0.5);
             }
             else{
                 markerOptions.position(latLng)
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.simple_travel_car_top_view))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.voiture))
                     .anchor((float) 0.5,(float) 0.5);}
 
             userLocationMarker = map.addMarker(markerOptions);
