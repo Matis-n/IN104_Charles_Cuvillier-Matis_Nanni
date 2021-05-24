@@ -7,6 +7,9 @@ com/example/goodgps/PermissionUtils.java
  com.example.goodgps.PermissionUtils$PermissionDeniedDialog
  com.example.goodgps.PermissionUtils$RationaleDialog
  com.example.goodgps.PermissionUtils$RationaleDialog$1
+com/example/goodgps/SplashScreenActivity.java
+ com.example.goodgps.SplashScreenActivity
+ com.example.goodgps.SplashScreenActivity$1
 com/example/goodgps/MapsActivity.java
  com.example.goodgps.MapsActivity
  com.example.goodgps.MapsActivity$1

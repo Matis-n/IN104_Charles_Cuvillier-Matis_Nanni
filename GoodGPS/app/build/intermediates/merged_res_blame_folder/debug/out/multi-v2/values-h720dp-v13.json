@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\matis\\OneDrive\\Documents\\ENSTA\\in104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "C:\\Users\\charl\\Documents\\ENSTA\\2020_2021\\cours\\IN104\\IN104_Charles_Cuvillier-Matis_Nanni\\GoodGPS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\matis\\.gradle\\caches\\transforms-2\\files-2.1\\21e1699138e4e4da2df2898493686baa\\appcompat-1.1.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\charl\\.gradle\\caches\\transforms-2\\files-2.1\\21e1699138e4e4da2df2898493686baa\\appcompat-1.1.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -13,17 +13,18 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        //redirection vers la page principale
-        Runnable runnable = new Runnable(){
+        //rediriger vers l'appli apres un delai
+        Runnable runnable = new Runnable() {
             @Override
-            public void run(){
-                //demarrer la page
+            public void run() {
+                //demarrer une page
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
                 startActivity(intent);
                 finish();
             }
         };
-        //delai
-        new Handler().postDelayed(runnable,1500);
+        // handler post delayed
+        new Handler().postDelayed(runnable, 1500);
+
     }
 }
