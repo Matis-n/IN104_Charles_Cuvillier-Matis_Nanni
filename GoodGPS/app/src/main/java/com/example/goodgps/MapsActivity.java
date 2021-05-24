@@ -13,6 +13,7 @@
 // limitations under the License.
 
 package com.example.goodgps;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.location.Address;
@@ -47,15 +48,11 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
+
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
+
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
@@ -172,14 +169,14 @@ OnMapLongClickListener{
             @Override
             public void onClick(View v) {
                 // The user just clicked the button 'Démarrer l'itinéraire'
-                Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
+                @SuppressLint("MissingPermission") Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
 
                 android.view.animation.Animation animation = AnimationUtils
                         .loadAnimation(MapsActivity.this, R.anim.bounce);
                 itinaryButton.startAnimation(animation);
 
                 if(switchState==true){
-
+/**Mode Hélicoptère*/
     locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
     @Override
     public void onSuccess(Location location) {
@@ -209,6 +206,7 @@ OnMapLongClickListener{
 
 
             }
+ /** Mode voiture*/
 else{
     locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
                     @Override
@@ -218,7 +216,7 @@ else{
                         map.clear();
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(userlatlng)
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.simple_travel_car_top_view))
                                 .anchor((float) 0.5, (float) 0.5);
                         userLocationMarker = map.addMarker(markerOptions);
                         map.animateCamera(CameraUpdateFactory.newLatLngZoom(userlatlng, 13));
@@ -227,7 +225,8 @@ else{
                                 .position(new LatLng((double) markersList.get(0), (double) markersList.get(1)))
                                 .title("destination")
                                 .draggable(false)
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
+                               // .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2))
+                                );
                         drawPolylines(userlatlng);
 
                     }
@@ -423,9 +422,16 @@ else{
         if (userLocationMarker == null){
             //create a new marker
             MarkerOptions markerOptions = new MarkerOptions();
-            markerOptions.position(latLng)
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
-                    .anchor((float) 0.5,(float) 0.5);
+            if (switchState==true){
+                markerOptions.position(latLng)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.helico))
+                        .anchor((float) 0.5,(float) 0.5);
+            }
+            else{
+                markerOptions.position(latLng)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.simple_travel_car_top_view))
+                    .anchor((float) 0.5,(float) 0.5);}
+
             userLocationMarker = map.addMarker(markerOptions);
             map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,13));
         } else {
@@ -436,6 +442,7 @@ else{
         }
     }
 
+    @SuppressLint("MissingPermission")
     protected void startLocationUpdates(){
         fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
     }
