@@ -161,7 +161,16 @@ OnMapLongClickListener{
                 // do something, the isChecked will be true if the switch is in the On position
                 switchState=isChecked;
                 Log.d("Switch",Boolean.toString(switchState));
-                if (switchState==true){modeText.setText("Mode : Voiture");}
+                if (switchState==true){modeText.setText("Mode : Voiture");
+
+
+
+
+
+
+
+
+                }
                 else{modeText.setText("Mode : Hélico");
                     }
             }
@@ -498,11 +507,19 @@ else{
             markersList.remove(1);
             markersList.remove(0);
         }
+
+        if (switchState==false){
         marker = map.addMarker(new MarkerOptions()
                 .position(new LatLng(latLng.latitude, latLng.longitude))
                 .title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude))
                 .draggable(false)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));}
+
+        else{marker = map.addMarker(new MarkerOptions()
+                .position(new LatLng(latLng.latitude, latLng.longitude))
+                .title(String.valueOf(latLng.latitude)+", "+String.valueOf(latLng.longitude))
+                .draggable(false)
+                );}
 
         markersList.add(latLng.latitude);
         markersList.add(latLng.longitude);
