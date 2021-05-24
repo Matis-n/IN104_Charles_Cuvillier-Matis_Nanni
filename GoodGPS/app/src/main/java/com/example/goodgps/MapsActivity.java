@@ -161,8 +161,8 @@ OnMapLongClickListener{
                 // do something, the isChecked will be true if the switch is in the On position
                 switchState=isChecked;
                 Log.d("Switch",Boolean.toString(switchState));
-                if (switchState==true){modeText.setText("Mode : Hélicoptère");}
-                else{modeText.setText("Mode : Voiture ma gueule");
+                if (switchState==true){modeText.setText("Mode : Voiture");}
+                else{modeText.setText("Mode : Hélico");
                     }
             }
         });
@@ -176,7 +176,7 @@ OnMapLongClickListener{
                         .loadAnimation(MapsActivity.this, R.anim.bounce);
                 itinaryButton.startAnimation(animation);
 
-                if(switchState==true){
+                if(switchState==false){
 /**Mode Hélicoptère*/
     locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
     @Override
@@ -196,9 +196,9 @@ OnMapLongClickListener{
                 .draggable(false)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.heliport2)));
         Polyline red = map.addPolyline(new PolylineOptions()
-                .color(Color.BLUE)
-                .width(6)
-                .add(new LatLng((double) markersList.get(0), (double) markersList.get(1)), userlatlng));
+                        .color(Color.BLUE)
+                        .width(6)
+                        .add(new LatLng((double) markersList.get(0), (double) markersList.get(1)), userlatlng));
 
     }
 });

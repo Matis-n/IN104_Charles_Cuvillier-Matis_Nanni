@@ -37,7 +37,7 @@
             android:id="@+id/modeText"
             android:layout_width="221dp"
             android:layout_height="38dp"
-            android:text="Mode : Voiture ma gueule"
+            android:text="Mode : Voiture"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/purple_700" />
 
