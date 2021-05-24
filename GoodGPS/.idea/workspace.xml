@@ -30,9 +30,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b313968-0df8-4616-bf7b-f0d06a1c262f" name="Default Changelist" comment="switch helico/voiture design">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/goodgps/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/goodgps/MapsActivity.java" afterDir="false" />
+    <list default="true" id="5b313968-0df8-4616-bf7b-f0d06a1c262f" name="Default Changelist" comment="helico a false">
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -344,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621859635407</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="helico a false">
+      <created>1621869494648</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621869494648</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +381,8 @@
     <MESSAGE value="Itinéraire en véhicule" />
     <MESSAGE value="Logo véhicule" />
     <MESSAGE value="switch helico/voiture design" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch helico/voiture design" />
+    <MESSAGE value="helico a false" />
+    <option name="LAST_COMMIT_MESSAGE" value="helico a false" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2506" y="198" key="#Inspections" timestamp="1621359852743">
@@ -449,21 +455,22 @@
     </state>
     <state x="2869" y="165" key="SettingsEditor/0.0.1536.824/2400.0.1920.1040@2400.0.1920.1040" timestamp="1621845988563" />
     <state x="375" y="115" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621855282004" />
-    <state x="309" y="110" key="Vcs.Push.Dialog.v2" timestamp="1621859647761">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2786" y="139" key="Vcs.Push.Dialog.v2" timestamp="1621869524743">
+      <screen x="2400" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1621706695332" />
+    <state x="2786" y="139" key="Vcs.Push.Dialog.v2/0.0.1536.824/2400.0.1920.1040@2400.0.1920.1040" timestamp="1621869524743" />
     <state x="309" y="110" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621859647761" />
     <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1621768757322">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1621768757322" />
-    <state x="3169" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621868479633">
+    <state x="3169" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621869960798">
       <screen x="2400" y="0" width="1920" height="1040" />
     </state>
     <state x="547" y="304" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1621694477853" />
     <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621363992272" />
-    <state x="3169" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/2400.0.1920.1040@2400.0.1920.1040" timestamp="1621868479633" />
+    <state x="3169" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/2400.0.1920.1040@2400.0.1920.1040" timestamp="1621869960798" />
     <state x="615" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1621860201106" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1621350681898">
       <screen x="0" y="0" width="1536" height="824" />
