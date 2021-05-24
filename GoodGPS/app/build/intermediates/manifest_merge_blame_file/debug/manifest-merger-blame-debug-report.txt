@@ -65,7 +65,7 @@
 44        <meta-data
 45            android:name="com.google.android.geo.API_KEY"
 45-->C:\Users\matis\OneDrive\Documents\ENSTA\in104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:33:13-58
-46            android:value="AIzaSyB_EOJQqygfn5bm1erfheusko3b1J8cSRc" />
+46            android:value="AIzaSyB3k2eMRj6q1cQ4zbqpnt19p6dQonhALow" />
 46-->C:\Users\matis\OneDrive\Documents\ENSTA\in104\IN104_Charles_Cuvillier-Matis_Nanni\GoodGPS\app\src\main\AndroidManifest.xml:34:13-44
 47
 48        <activity

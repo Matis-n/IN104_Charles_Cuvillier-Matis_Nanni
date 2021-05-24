@@ -118,10 +118,11 @@ OnMapLongClickListener{
 
     private GoogleMap map;
     private Button itinaryButton;
+    /**True = allumé = trajet en hélico*/
     private Switch helicoSwitch;
     private List markersList = new ArrayList();
     private Marker marker;
-    private boolean switchState=true;
+    private boolean switchState=false;
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationRequest locationRequest;
 
@@ -158,10 +159,12 @@ OnMapLongClickListener{
         enableMyLocation();
         map.setOnMapLongClickListener(this);
 
+        /**True = allumé = trajet en hélico*/
         helicoSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // do something, the isChecked will be true if the switch is in the On position
                 switchState=isChecked;
+                Log.d("Switch",Boolean.toString(switchState));
             }
         });
 
@@ -211,6 +214,7 @@ else{
                     @Override
                     public void onSuccess(Location location) {
                         LatLng userlatlng = new LatLng(location.getLatitude(), location.getLongitude());
+                        Log.d("userLatlng",userlatlng.toString());
                         map.clear();
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(userlatlng)
@@ -346,7 +350,7 @@ else{
         // Destination of route
         String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
         //API key
-        String key = "key="+ "AIzaSyB_EOJQqygfn5bm1erfheusko3b1J8cSRc";
+        String key = "key="+ "AIzaSyB3k2eMRj6q1cQ4zbqpnt19p6dQonhALow";
         // Sensor enabled
         String sensor = "sensor=false";
         String mode = "mode=driving";

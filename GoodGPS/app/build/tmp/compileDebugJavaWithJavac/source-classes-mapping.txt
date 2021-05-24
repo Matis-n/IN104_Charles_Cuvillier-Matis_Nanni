@@ -1,12 +1,7 @@
-com/example/goodgps/BuildConfig.java
- com.example.goodgps.BuildConfig
-com/example/goodgps/PermissionUtils.java
- com.example.goodgps.PermissionUtils
- com.example.goodgps.PermissionUtils$PermissionDeniedDialog
- com.example.goodgps.PermissionUtils$RationaleDialog
- com.example.goodgps.PermissionUtils$RationaleDialog$1
 com/example/goodgps/DirectionsJSONParser.java
  com.example.goodgps.DirectionsJSONParser
+com/example/goodgps/BuildConfig.java
+ com.example.goodgps.BuildConfig
 com/example/goodgps/MapsActivity.java
  com.example.goodgps.MapsActivity
  com.example.goodgps.MapsActivity$1
@@ -16,3 +11,8 @@ com/example/goodgps/MapsActivity.java
  com.example.goodgps.MapsActivity$3
  com.example.goodgps.MapsActivity$DownloadTask
  com.example.goodgps.MapsActivity$ParserTask
+com/example/goodgps/PermissionUtils.java
+ com.example.goodgps.PermissionUtils
+ com.example.goodgps.PermissionUtils$PermissionDeniedDialog
+ com.example.goodgps.PermissionUtils$RationaleDialog
+ com.example.goodgps.PermissionUtils$RationaleDialog$1

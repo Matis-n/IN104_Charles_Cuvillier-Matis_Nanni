@@ -10,5 +10,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
   // Field from the variant API
-  public static final String MAPS_API_KEY = "AIzaSyB_EOJQqygfn5bm1erfheusko3b1J8cSRc";
+  public static final String MAPS_API_KEY = "AIzaSyB3k2eMRj6q1cQ4zbqpnt19p6dQonhALow";
 }
