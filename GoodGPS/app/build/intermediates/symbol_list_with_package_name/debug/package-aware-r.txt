@@ -1420,6 +1420,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable helico
+drawable helico_bits_background
 drawable heliport
 drawable heliport2
 drawable ic_calendar_black_24dp
@@ -1894,6 +1895,9 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+mipmap helico_bits
+mipmap helico_bits_foreground
+mipmap helico_bits_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap my_logo
